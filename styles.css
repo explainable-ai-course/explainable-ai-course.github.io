@@ -29,8 +29,11 @@ header {
 /* Main content layout */
 .main-container {
   display: flex;
-  margin: 20px 0;
+  margin: 0; /* Remove margins to cover the full page width */
   flex: 1;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Make content stretch vertically */
+  min-height: 100vh; /* Ensure it fills the full viewport */
 }
 
 /* Sidebar styling */
@@ -68,10 +71,11 @@ header {
 /* Main content styling */
 main {
   flex: 1;
-  padding: 40px; /* Padding around the content */
+  padding: 0; /* Remove padding to let the table stretch */
   background-color: white;
   border-radius: 8px; /* Slightly rounded corners for aesthetics */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  min-height: calc(100vh - 100px); /* Ensure main content takes up the full height minus header/footer */
 }
 
 main h2 {
@@ -83,7 +87,7 @@ main h2 {
 table {
   width: 100%;  /* Full-width table */
   border-collapse: collapse; /* Remove gaps between table borders */
-  margin-top: 30px; /* Space above the table */
+  margin-top: 0; /* Remove margin to fit into space */
   background-color: white;
 }
 
