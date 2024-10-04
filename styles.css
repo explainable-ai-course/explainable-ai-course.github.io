@@ -4,9 +4,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f7f7f7; /* Slightly off-white for a softer background */
+  min-height: 100vh; /* Ensures the body takes up at least the whole viewport height */
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the body takes up at least the whole viewport height */
 }
 
 /* Header styling */
@@ -26,13 +26,11 @@ header {
   font-weight: bold;
 }
 
-/* Main container layout */
+/* Main content layout */
 .main-container {
   display: flex;
-  flex: 1;
-  margin: 20px 0;
-  padding: 0; /* Remove extra margins/padding */
-  min-height: calc(100vh - 150px); /* Adjust height accounting for header and footer */
+  flex-grow: 1;
+  min-height: 0; /* Fixes the issue with flex children not growing */
 }
 
 /* Sidebar styling */
@@ -40,7 +38,8 @@ header {
   background-color: #34495e; /* Dark sidebar background */
   color: white;
   padding: 25px; /* Padding inside sidebar */
-  min-width: 250px; /* Minimum width to ensure proper sizing */
+  width: 250px; /* Fixed width for sidebar */
+  flex-shrink: 0; /* Prevent the sidebar from shrinking */
   display: flex;
   flex-direction: column;
 }
@@ -71,7 +70,7 @@ header {
 
 /* Main content styling */
 main {
-  flex: 1;
+  flex-grow: 1; /* Ensure the main section stretches to fill available space */
   padding: 40px; /* Padding around the content */
   background-color: white;
   border-radius: 8px; /* Slightly rounded corners for aesthetics */
@@ -91,7 +90,6 @@ table {
   border-collapse: collapse; /* Remove gaps between table borders */
   margin-top: 30px; /* Space above the table */
   background-color: white;
-  flex-grow: 1; /* Ensure table grows to fill the available space */
 }
 
 table th,
@@ -145,8 +143,6 @@ footer {
   text-align: center;
   padding: 2em;
   font-size: 0.9em;
-  position: relative;
-  bottom: 0;
   width: 100%;
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
   margin-top: auto; /* Footer stays at the bottom of the page */
@@ -160,7 +156,7 @@ footer {
   }
 
   .sidebar {
-    min-width: 100%; /* Sidebar takes full width on small screens */
+    width: 100%; /* Sidebar takes full width on small screens */
   }
 
   .sidebar ul li {
