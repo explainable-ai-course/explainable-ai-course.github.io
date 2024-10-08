@@ -22,9 +22,9 @@ header {
 
 /* Logo styling */
 .logo {
-  height: 80px; /* Adjust the size of the logo */
-  max-width: 150px; /* Set a maximum width */
-  margin-right: 15px;
+  height: 1600px; /* Adjust the size of the logo */
+  max-width: 300px; /* Set a maximum width */
+  margin-right: 25px;
 }
 
 /* Adjust the header content to accommodate the logo */
