@@ -23,6 +23,7 @@ header {
 /* Logo styling */
 .logo {
   height: 80px; /* Adjust the size of the logo */
+  max-width: 150px; /* Set a maximum width */
   margin-right: 15px;
 }
 
@@ -32,6 +33,11 @@ header {
   align-items: center; /* Vertically aligns the logo with the text */
   justify-content: center; /* Keeps the text centered */
 }
+
+.header-content img {
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+}
+
 
 .header-content h1, .header-content h2 {
   margin-left: 20px; /* Space between logo and text */
