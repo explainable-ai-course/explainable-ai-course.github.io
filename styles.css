@@ -22,8 +22,8 @@ header {
 
 /* Logo styling */
 .logo {
-  height: 100px; /* Reduced the size of the logo */
-  max-width: 200px; /* Smaller maximum width */
+  height: 200px; /* Keep the original size of the logo */
+  max-width: 350px; /* Original maximum width */
   margin-right: 30px;
   padding: 10px; /* Adjusted padding for better spacing */
   border-radius: 8px; /* Optional: Slightly round the corners of the image */
