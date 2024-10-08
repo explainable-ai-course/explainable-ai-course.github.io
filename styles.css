@@ -16,9 +16,8 @@ header {
   color: white;
   text-align: center;
   padding: 2em 0; /* Reduced padding to make header shorter */
-  position: sticky;
-  top: 0;
   z-index: 100;
+  /* Removed sticky positioning */
 }
 
 /* Logo styling */
