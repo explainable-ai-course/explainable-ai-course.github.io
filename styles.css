@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 200px; /* Adds space at the top to prevent content from overlapping the header */
 }
 
 /* Header styling */
@@ -57,7 +58,6 @@ header {
   display: flex;
   flex-grow: 1;
   padding: 20px;
-  margin-top: 200px; /* Add margin-top to account for fixed header */
 }
 
 /* Sidebar styling */
