@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 200px; /* Adds space at the top to prevent content from overlapping the header */
+  padding-top: 250px; /* Ensure space for the fixed header across all pages */
 }
 
 /* Header styling */
@@ -15,7 +15,8 @@ header {
   background-color: #2c3e50;
   color: white;
   text-align: center;
-  padding: 1em 0; /* Reduced padding to make header shorter */
+  height: 250px; /* Set a fixed height for the header */
+  padding: 1em 0;
   position: fixed;
   top: 0;
   width: 100%; /* Ensure header spans full width of viewport */
@@ -27,7 +28,7 @@ header {
   height: 200px; /* Keep the original size of the logo */
   max-width: 350px; /* Original maximum width */
   margin-right: 30px;
-  padding: 10px; /* Adjusted padding for better spacing */
+  padding: 10px;
   border-radius: 8px; /* Optional: Slightly round the corners of the image */
 }
 
@@ -45,12 +46,12 @@ header {
 
 .header-content h1 {
   margin-left: 25px; /* Space between logo and text */
-  font-size: 2em; /* Further reduced size of the header text */
+  font-size: 2em;
 }
 
 .header-content h2 {
-  margin-left: 25px; /* Space between logo and text */
-  font-size: 1.8em; /* Reduced size of the sub-header text */
+  margin-left: 25px;
+  font-size: 1.8em;
 }
 
 /* Main layout */
