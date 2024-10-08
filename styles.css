@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 250px; /* Ensure space for the fixed header across all pages */
+  /* Removed padding-top since header is no longer fixed */
 }
 
 /* Header styling */
@@ -15,18 +15,17 @@ header {
   background-color: #2c3e50;
   color: white;
   text-align: center;
-  height: 250px; /* Set a fixed height for the header */
   padding: 1em 0;
-  position: fixed;
-  top: 0;
   width: 100%; /* Ensure header spans full width of viewport */
   z-index: 100;
+  position: relative; /* Default flow so it moves with the content */
+  height: 250px; /* Keep consistent height for the header */
 }
 
 /* Logo styling */
 .logo {
   height: 200px; /* Keep the original size of the logo */
-  max-width: 350px; /* Original maximum width */
+  max-width: 350px;
   margin-right: 30px;
   padding: 10px;
   border-radius: 8px; /* Optional: Slightly round the corners of the image */
@@ -45,7 +44,7 @@ header {
 }
 
 .header-content h1 {
-  margin-left: 25px; /* Space between logo and text */
+  margin-left: 25px;
   font-size: 2em;
 }
 
@@ -59,6 +58,8 @@ header {
   display: flex;
   flex-grow: 1;
   padding: 20px;
+  text-align: center; /* Center the content text */
+  font-size: 1.25em; /* Increase the font size of the main content */
 }
 
 /* Sidebar styling */
@@ -95,12 +96,14 @@ main {
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.5em; /* Increase the font size for better readability */
 }
 
 main h2 {
-  font-size: 2.2em;
+  font-size: 2.5em; /* Larger heading for emphasis */
   color: #333;
   margin-bottom: 20px;
+  text-align: center; /* Ensure headings are centered */
 }
 
 /* Table styling */
@@ -108,6 +111,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  font-size: 1.25em; /* Increase table text size */
 }
 
 table th, table td {
