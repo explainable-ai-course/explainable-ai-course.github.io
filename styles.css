@@ -1,4 +1,3 @@
-
 /* General body styling */
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -15,41 +14,39 @@ header {
   background-color: #2c3e50;
   color: white;
   text-align: center;
-  padding: 2em 0; /* Reduced padding to make header shorter */
+  padding: 2em 0;
   z-index: 100;
-  /* Removed sticky positioning */
 }
 
 /* Logo styling */
 .logo {
-  height: 200px; /* Reduced the size of the logo */
-  max-width: 350px; /* Slightly smaller maximum width */
+  height: 200px;
+  max-width: 350px;
   margin-right: 30px;
-  padding: 10px; /* Reduced padding for better spacing */
-  border-radius: 8px; /* Optional: Slightly round the corners of the image */
-  /* Removed the shadow effect */
+  padding: 10px;
+  border-radius: 8px;
 }
 
 /* Adjust the header content to accommodate the logo */
 .header-content {
   display: flex;
-  align-items: center; /* Vertically aligns the logo with the text */
-  justify-content: center; /* Keeps the text centered */
-  flex-wrap: wrap; /* Ensures the content wraps well on smaller screens */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .header-content img {
-  flex-shrink: 0; /* Prevent the logo from shrinking */
+  flex-shrink: 0;
 }
 
 .header-content h1 {
-  margin-left: 25px; /* Space between logo and text */
-  font-size: 2.5em; /* Reduced size of the header text */
+  margin-left: 25px;
+  font-size: 2.5em;
 }
 
 .header-content h2 {
-  margin-left: 25px; /* Space between logo and text */
-  font-size: 2em; /* Reduced size of the sub-header text */
+  margin-left: 25px;
+  font-size: 2em;
 }
 
 /* Main layout */
@@ -57,13 +54,16 @@ header {
   display: flex;
   flex-grow: 1;
   padding: 20px;
+  flex-direction: column; /* Default to column layout for all screens */
 }
 
+/* Sidebar styling */
 .sidebar {
   background-color: #34495e;
   color: white;
-  width: 250px;
+  width: 100%; /* Full width on mobile */
   padding: 25px;
+  margin-bottom: 20px; /* Space between sidebar and main content on mobile */
 }
 
 .sidebar ul {
@@ -126,6 +126,7 @@ table tr:hover {
   background-color: #c7d1db;
 }
 
+/* Footer styling */
 footer {
   background-color: #2c3e50;
   color: white;
@@ -136,8 +137,21 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .main-container {
+  .header-content {
     flex-direction: column;
+    text-align: center; /* Aligns content to center on mobile */
+  }
+
+  .header-content h1, .header-content h2 {
+    margin-left: 0; /* Removes left margin on mobile */
+  }
+
+  .logo {
+    margin-bottom: 20px; /* Adds space below the logo on mobile */
+  }
+
+  .main-container {
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 
   .sidebar {
@@ -147,5 +161,23 @@ footer {
 
   main {
     padding: 20px;
+  }
+
+  table th, table td {
+    padding: 10px 15px; /* Reduces padding for better fit on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 2em; /* Further reduce header text size for smaller screens */
+  }
+
+  .header-content h2 {
+    font-size: 1.5em;
+  }
+
+  .sidebar ul li a {
+    font-size: 1em; /* Slightly reduce sidebar font size on small screens */
   }
 }
