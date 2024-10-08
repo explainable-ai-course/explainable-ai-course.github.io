@@ -49,21 +49,19 @@ header {
   font-size: 2em;
 }
 
-/* Main layout */
+/* Main layout for desktop */
 .main-container {
-  display: flex;
+  display: flex; /* Flex row layout for desktop */
   flex-grow: 1;
   padding: 20px;
-  flex-direction: column; /* Default to column layout for all screens */
 }
 
 /* Sidebar styling */
 .sidebar {
   background-color: #34495e;
   color: white;
-  width: 100%; /* Full width on mobile */
+  width: 250px; /* Fixed width for desktop */
   padding: 25px;
-  margin-bottom: 20px; /* Space between sidebar and main content on mobile */
 }
 
 .sidebar ul {
@@ -135,27 +133,14 @@ footer {
   margin-top: auto;
 }
 
-/* Responsive adjustments */
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center; /* Aligns content to center on mobile */
-  }
-
-  .header-content h1, .header-content h2 {
-    margin-left: 0; /* Removes left margin on mobile */
-  }
-
-  .logo {
-    margin-bottom: 20px; /* Adds space below the logo on mobile */
-  }
-
   .main-container {
-    padding: 10px; /* Adjust padding for smaller screens */
+    flex-direction: column; /* Stacks sidebar and content vertically */
   }
 
   .sidebar {
-    width: 100%;
+    width: 100%; /* Sidebar takes full width on mobile */
     margin-bottom: 20px;
   }
 
@@ -163,14 +148,23 @@ footer {
     padding: 20px;
   }
 
-  table th, table td {
-    padding: 10px 15px; /* Reduces padding for better fit on smaller screens */
+  .header-content {
+    flex-direction: column; /* Stacks header logo and text vertically */
+    text-align: center;
+  }
+
+  .header-content h1, .header-content h2 {
+    margin-left: 0; /* Remove left margin on mobile */
+  }
+
+  .logo {
+    margin-bottom: 20px; /* Adds space below the logo on mobile */
   }
 }
 
 @media (max-width: 480px) {
   .header-content h1 {
-    font-size: 2em; /* Further reduce header text size for smaller screens */
+    font-size: 2em; /* Smaller font size for header on small screens */
   }
 
   .header-content h2 {
@@ -178,6 +172,6 @@ footer {
   }
 
   .sidebar ul li a {
-    font-size: 1em; /* Slightly reduce sidebar font size on small screens */
+    font-size: 1em; /* Smaller sidebar text on very small screens */
   }
 }
