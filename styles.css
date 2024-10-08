@@ -20,16 +20,21 @@ header {
   z-index: 100;
 }
 
-.header-content h1 {
-  font-size: 3em;
-  font-weight: bold;
-  margin: 0;
+/* Logo styling */
+.logo {
+  height: 80px; /* Adjust the size of the logo */
+  margin-right: 15px;
 }
 
-.header-content h2 {
-  font-size: 1.5em;
-  font-weight: normal;
-  margin: 0;
+/* Adjust the header content to accommodate the logo */
+.header-content {
+  display: flex;
+  align-items: center; /* Vertically aligns the logo with the text */
+  justify-content: center; /* Keeps the text centered */
+}
+
+.header-content h1, .header-content h2 {
+  margin-left: 20px; /* Space between logo and text */
 }
 
 /* Main layout */
