@@ -1,3 +1,4 @@
+
 /* General body styling */
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -7,7 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Removed padding-top since header is no longer fixed */
 }
 
 /* Header styling */
@@ -15,20 +15,20 @@ header {
   background-color: #2c3e50;
   color: white;
   text-align: center;
-  padding: 1em 0;
-  width: 100%; /* Ensure header spans full width of viewport */
+  padding: 2em 0; /* Reduced padding to make header shorter */
+  position: sticky;
+  top: 0;
   z-index: 100;
-  position: relative; /* Default flow so it moves with the content */
-  height: 250px; /* Keep consistent height for the header */
 }
 
 /* Logo styling */
 .logo {
-  height: 200px; /* Keep the original size of the logo */
-  max-width: 350px;
+  height: 200px; /* Reduced the size of the logo */
+  max-width: 350px; /* Slightly smaller maximum width */
   margin-right: 30px;
-  padding: 10px;
+  padding: 10px; /* Reduced padding for better spacing */
   border-radius: 8px; /* Optional: Slightly round the corners of the image */
+  /* Removed the shadow effect */
 }
 
 /* Adjust the header content to accommodate the logo */
@@ -44,13 +44,13 @@ header {
 }
 
 .header-content h1 {
-  margin-left: 25px;
-  font-size: 2em;
+  margin-left: 25px; /* Space between logo and text */
+  font-size: 2.5em; /* Reduced size of the header text */
 }
 
 .header-content h2 {
-  margin-left: 25px;
-  font-size: 1.8em;
+  margin-left: 25px; /* Space between logo and text */
+  font-size: 2em; /* Reduced size of the sub-header text */
 }
 
 /* Main layout */
@@ -58,11 +58,8 @@ header {
   display: flex;
   flex-grow: 1;
   padding: 20px;
-  text-align: center; /* Center the content text */
-  font-size: 1.25em; /* Increase the font size of the main content */
 }
 
-/* Sidebar styling */
 .sidebar {
   background-color: #34495e;
   color: white;
@@ -96,14 +93,12 @@ main {
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  font-size: 1.5em; /* Increase the font size for better readability */
 }
 
 main h2 {
-  font-size: 2.5em; /* Larger heading for emphasis */
+  font-size: 2.2em;
   color: #333;
   margin-bottom: 20px;
-  text-align: center; /* Ensure headings are centered */
 }
 
 /* Table styling */
@@ -111,7 +106,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  font-size: 1.25em; /* Increase table text size */
 }
 
 table th, table td {
@@ -133,7 +127,6 @@ table tr:hover {
   background-color: #c7d1db;
 }
 
-/* Footer styling */
 footer {
   background-color: #2c3e50;
   color: white;
