@@ -27,8 +27,9 @@ header {
   margin-right: 30px;
   padding: 10px; /* Added padding for better spacing */
   border-radius: 8px; /* Optional: Slightly round the corners of the image */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Added a shadow for aesthetics */
+  /* Removed the shadow effect */
 }
+
 
 /* Adjust the header content to accommodate the logo */
 .header-content {
