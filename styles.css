@@ -14,7 +14,7 @@ header {
   background-color: #2c3e50;
   color: white;
   text-align: center;
-  padding: 2em 0;
+  padding: 3em 0; /* Increased padding for more breathing room */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -22,9 +22,12 @@ header {
 
 /* Logo styling */
 .logo {
-  height: 160px; /* Adjust the size of the logo */
-  max-width: 300px; /* Set a maximum width */
-  margin-right: 20px;
+  height: 200px; /* Increased the size of the logo */
+  max-width: 400px; /* Set a larger maximum width */
+  margin-right: 30px;
+  padding: 10px; /* Added padding for better spacing */
+  border-radius: 8px; /* Optional: Slightly round the corners of the image */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Added a shadow for aesthetics */
 }
 
 /* Adjust the header content to accommodate the logo */
@@ -32,15 +35,15 @@ header {
   display: flex;
   align-items: center; /* Vertically aligns the logo with the text */
   justify-content: center; /* Keeps the text centered */
+  flex-wrap: wrap; /* Ensures the content wraps well on smaller screens */
 }
 
 .header-content img {
   flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
-
 .header-content h1, .header-content h2 {
-  margin-left: 20px; /* Space between logo and text */
+  margin-left: 25px; /* Increased space between logo and text */
 }
 
 /* Main layout */
